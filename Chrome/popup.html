@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internet Archive Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      width: 300px;
+    }
+    h1 {
+      font-size: 16px;
+      text-align: center;
+      margin: 0 0 10px;
+      color: #333;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      background-color: #0078d7;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #005a9e;
+    }
+    iframe {
+      width: 100%;
+      height: 0;
+      margin-top: 10px;
+      border: none;
+      transition: height 0.5s ease;
+    }
+    .status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+      display: none;
+    }
+    .iframe-container {
+      position: relative;
+      border: 1px solid #ddd;
+      width: 100%;
+    }
+    .newtab-btn, .close-btn {
+      position: absolute; 
+      height: 24px;
+      width: 24px;
+      padding: 4px;
+      background-color: #0078d7;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+    .newtab-btn {
+      bottom: 5px !important;
+      right: 5px !important;
+    }
+    .close-btn {
+      top: 5px !important;
+      right: 5px !important;
+    }
+    footer {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 10px;
+    }
+    footer p {
+        margin: 0 !important;
+    }
+    .heart {
+        color: red;
+    }
+    .loader {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 4px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 4px solid #0078d7;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Internet Archive Assistant</h1>
+  <p>Quickly save or retrieve web pages from the Internet Archive with ease.</p>
+  <button id="save" class="btn">Save Page to Internet Archive</button>
+  <button id="view" class="btn">Load Page from Internet Archive</button>
+  
+  <div class="iframe-container">
+    <iframe id="resultFrame" src=""></iframe>
+    <div class="loader" id="loader"></div>
+    <button class="newtab-btn" id="openNewTab" title="Open in New Tab">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,256,256" width="16px" height="16px" fill-rule="nonzero"><g fill="#ffffff"><g transform="scale(10.66667,10.66667)"><path d="M5,3c-1.09306,0 -2,0.90694 -2,2v14c0,1.09306 0.90694,2 2,2h14c1.09306,0 2,-0.90694 2,-2v-7h-2v7h-14v-14h7v-2zM14,3v2h3.58594l-9.29297,9.29297l1.41406,1.41406l9.29297,-9.29297v3.58594h2v-7z"></path></g></g></svg>
+    </button>
+    <button class="close-btn" id="closeIframe" title="Stop Loading & Close">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,256,256" width="16px" height="16px" fill-rule="nonzero"><g fill="#ffffff"><g transform="scale(10.66667,10.66667)"><path d="M4.70703,3.29297l-1.41406,1.41406l7.29297,7.29297l-7.29297,7.29297l1.41406,1.41406l7.29297,-7.29297l7.29297,7.29297l1.41406,-1.41406l-7.29297,-7.29297l7.29297,-7.29297l-1.41406,-1.41406l-7.29297,7.29297z"></path></g></g></svg>
+    </button>
+  </div>
+
+  <div id="statusMessage" class="status"></div>
+  <footer>
+    <p>Built with <span class="heart">&#10084;</span> for easy web archiving.</p>
+    <p>&copy; 2024 <a href="https://vishwas.me" target="_blank">Vishwas</a></p>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
