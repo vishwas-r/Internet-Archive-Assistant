@@ -1,3 +1,5 @@
+# Internet Archive Assistant
+
 **Preserve and revisit the web effortlessly with Internet Archive Assistant!**  
 _This lightweight add-on enables you to save web pages to the Internet Archive or retrieve their latest archived versions with a single click._ Perfect for **students**, **researchers**, and **digital archivists**, it ensures important content remains accessible for years to come.  
   
