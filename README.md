@@ -17,6 +17,8 @@ This add-on doesn’t track your activity or store any data—ensuring a secure 
   
 _Whether you're preserving academic references, capturing historical records, or saving personal favorites, Internet Archive Assistant is your go-to tool for web archiving._
 
+**Chrome Extension**: [https://chromewebstore.google.com/detail/internet-archive-assistan/behpdfoepanebmpljobdjgbkkekidhfh](https://chromewebstore.google.com/detail/internet-archive-assistan/behpdfoepanebmpljobdjgbkkekidhfh)
+
 **Firefox Addon**: [https://addons.mozilla.org/en-US/firefox/addon/internet-archive-assistant/](https://addons.mozilla.org/en-US/firefox/addon/internet-archive-assistant/)
 
 ---
